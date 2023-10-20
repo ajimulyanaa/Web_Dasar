@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TABEL</title>
+  </head>
+  <body>
+    <!-- Tabel pada HTML disusun dari tiga buah elemen, yaitu <table>, <tr> dan <td> atau <th>. Elemen <table> digunakan untuk menandakan dimulainya dan diakhirinya sebuah konten tabel dan juga sebagai wadah untuk tabel itu sendiri. Kemudian elemen <tr> digunakan untuk membuat sebuah baris baru yang di dalamnya terdapat elemen <td> atau <th> sehingga menghasilkan sebuah sel. 
+
+Elemen <td> berarti “table data”. Selain membuat sel, elemen ini juga merupakan tempat menampung data pada tabel, dan elemen <th> atau “table header” digunakan untuk menentukan sebuah header pada kolom datanya. -->
+    <h1>Pemenang piala dunia tiga tahun terakhir</h1>
+    <table>
+      <tr>
+        <th>Tahun</th>
+        <th>Juara-1</th>
+        <th>Juara-2</th>
+        <th>Juara-3</th>
+      </tr>
+      <tr>
+        <td>2018</td>
+        <td>Prancis</td>
+        <td>Kroasia</td>
+        <td>Belgia</td>
+      </tr>
+      <tr>
+        <td>2014</td>
+        <td>Jerman</td>
+        <td>Argentina</td>
+        <td>Belanda</td>
+      </tr>
+      <tr>
+        <td>2010</td>
+        <td>Spanyol</td>
+        <td>Belanda</td>
+        <td>Jerman</td>
+      </tr>
+    </table>
+
+    <!-- spanning  table-->
+    <!-- colspan dan rowspan-->
+    <!-- colspan adalah untuk menggabungkan colom ke samping -->
+    <!-- rowspan adalahcolspan adalah untuk menggabungkan colom ke bawah -->
+    <h3>Colspan</h3>
+    <table border="1">
+      <tr>
+        <th>18:00</th>
+        <th>19:00</th>
+        <th>20:00</th>
+      </tr>
+      <tr>
+        <td colspan="2">colspan</td>
+        <td>It Chapter 2</td>
+      </tr>
+      <tr>
+        <td>One Piece: Stampede</td>
+        <td>Weathering With You</td>
+        <td>Gundala</td>
+      </tr>
+      <tr>
+        <td>Gundala</td>
+        <td colspan="2">colspan</td>
+      </tr>
+    </table>
+    <!-- rowspan -->
+    <h3>Rowspan</h3>
+    <table border="1">
+      <tr>
+        <th rowspan="3">Rowspan</th>
+        <td>Avenger Infinity Wars</td>
+      </tr>
+      <tr>
+        <td>One Piece: Stampede</td>
+      </tr>
+      <tr>
+        <td>Gundala</td>
+      </tr>
+    </table>
+  </body>
+</html>
