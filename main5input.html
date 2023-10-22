@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input</title>
+  </head>
+  <body>
+    <!-- 
+        <input type="text">
+
+Input teks yang berisi satu baris. Ini adalah tipe default dari input elemen. Jika tidak menentukan tipenya, tipe text-lah yang akan diterapkan.
+
+<input type="number">
+
+Input teks yang hanya mengizinkan format angka. 
+
+<input type="password">
+
+Sama seperti input text, tetapi setiap karakter akan ditampilkan sebagai bintang.
+
+<input type="email">
+
+Sama seperti teks biasa, tetapi input ini dikhususkan untuk format email. Jika tidak, error akan muncul.
+
+<input type="search">
+
+Input untuk melakukan pencarian berdasarkan kata kunci. Input ini memiliki ikon ✕ di tepi kanan elemen untuk melakukan clear text.
+
+<input type="date">
+
+Untuk mengambil data tanggal. Tipe ini akan menyediakan popup penanggalan untuk mempermudah pengisian. 
+
+<input type="time">
+
+Menentukan waktu (jam) yang ingin user isi. Tipe input ini juga akan menampilkan visual dari jam.
+
+<input type="datetime-local">
+
+Sama seperti tipe date, tetapi ia menambahkan data waktu (jam).
+
+<input type="checkbox">
+
+Di-render sebagai sebuah kotak yang dapat dicek untuk active.
+
+<input type="radio">
+
+Pada umumnya, ini digunakan untuk melakukan pemilihan dari sekian opsi (radio button) yang ada. Untuk melakukannya, input ini akan dikelompokkan dalam sebuah radio group. Bukan merupakan suatu elemen, kita dapat memberikan value yang sama pada atribut name di setiap elemen radio.
+
+<input type="range">
+
+Menentukan nilai angka berdasarkan jangkauan nilai yang ditentukan. User tidak akan bisa mengambil nilai diluar yang ditentukan. 
+
+<input type="color">
+
+User dapat menentukan warna dengan tipe ini, baik menggunakan color picker atau memasukkan format nilai warna secara manual.
+
+<input type="file">
+
+Melakukan input satu atau lebih berkas dari penyimpanan data perangkatnya.
+
+<input type="submit">
+
+Input yang di-render sebagai tombol submit. Jika tombol ini ditekan, formulir akan ter-submit dan dikirimkan ke tujuan pengiriman (atribut action).
+
+<input type="hidden">
+
+Biasanya, tipe ini tidak terlihat oleh user. Namun, input ini akan sangat berguna bagi developer untuk memasukkan suatu data.
+     -->
+    <div>
+      <label for="d" value="user"
+        >Username
+        <input type="text" id="d" />
+      </label>
+    </div>
+    <div>
+      <label for="c"
+        >no hp
+        <input type="color" id="c" />
+      </label>
+    </div>
+    <div>
+      <label for="b"
+        >email
+        <input type="email" id="b" />
+      </label>
+    </div>
+    <div>
+      <label for="a"
+        >password"
+        <input type="time" id="a" />
+      </label>
+    </div>
+    <div>
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+    </div>
+
+    <!-- place holder  -->
+    <!-- Atribut placeholder digunakan untuk memberikan contoh atau referensi data sebagai panduan user mengisi data, sedangkan atribut required menandakan bahwa elemen input tersebut wajib diisi. -->
+    <!-- atrinut form -->
+    <!-- 
+-name
+
+semua tipe
+
+Menamai elemen input. Data yang diisikan oleh user akan dikirimkan saat formulir di-submit. Atribut ini memiliki peran yang sangat penting. Jika tidak menyertakannya, data input tidak akan dikirim ke server.
+
+-placeholder
+
+text, search, url, tel, email, password, number
+
+Teks “samar” yang muncul pada kolom input. Teks ini biasanya digunakan sebagai petunjuk atau contoh data yang perlu diisi.
+
+-required
+
+semua tipe, kecuali hidden, range, color, dan button
+
+Atribut ini menyebabkan elemen input wajib diisi untuk di-submit. Ia merupakan atribut boolean.
+
+-value
+
+semua tipe, kecuali image
+
+Memberikan data awal atau default pada elemen input.
+
+-autocomplete
+
+semua tipe, kecuali checkbox, radio, dan button
+
+Fitur melengkapi input secara otomatis. Biasanya, ini terjadi ketika kita pernah meng-input sesuatu dan pada kesempatan berikutnya, data tersebut akan ditampilkan lagi oleh browser sebagai autocomplete.
+
+-maxlength
+
+text, search, url, tel, email, password
+
+Menentukan maksimal panjang karakter yang diperbolehkan pada kolom input.
+
+-max
+
+date, month, week, time, datetime-local, number, range
+
+Menentukan maksimal nilai yang diperbolehkan.
+
+-minlength
+
+text, search, url, tel, email, password
+
+Menentukan minimal panjang karakter yang diperbolehkan pada kolom input.
+
+-min
+
+date, month, week, time, datetime-local, number, range
+
+Menentukan minimal nilai yang diperbolehkan.
+
+-checked
+
+checkbox, radio
+
+Mengaktifkan atau mencentangkan input checkbox.
+
+-accept
+
+file
+
+Panduan atau batasan format berkas apa yang diperbolehkan pada input berkas.
+
+-multiple
+
+email, file
+
+Memungkinkan pemilihan ganda pada elemen input.
+
+-pattern
+
+text, search, url, tel, email, password
+
+Menentukan pola yang wajib dipatuhi pada data yang diisi agar dapat valid.
+
+-readonly
+
+semua tipe, kecuali hidden, range, color, checkbox, radio, dan button
+
+Tidak memiliki akses edit nilai.
+
+-disabled
+
+semua tipe
+
+Memberikan efek tidak aktif pada elemen input.
+     -->
+    <h2>form</h2>
+    <form action="">
+      <label for="user">
+        masukan nama
+        <input type="text" for="user" placeholder="example@gmail.com" required />
+      </label>
+      <br />
+      <label for="pass">
+        masukan password
+        <input type="password" for="password" placeholder="******" required />
+      </label>
+    </form>
+
+    <h2>form dengan button</h2>
+    <h2>form</h2>
+    <form action="">
+      <label for="user">
+        masukan nama
+        <input type="text" for="user" placeholder="example@gmail.com" name="input" />
+      </label>
+      <br />
+      <label for="pass">
+        masukan password
+        <input type="password" for="password" placeholder="******" name="password" />
+      </label>
+      <button type="submit">KIRIM</button>
+    </form>
+    <!-- 
+        Ada dua buah metode yang bisa digunakan untuk mengirimkan data pada formulir HTML, yaitu GET dan POST.
+        
+non-breaking space
+
+
+&nbsp;
+
+
+&#160;
+
+
+&
+
+Ampersand
+
+&amp;
+
+&#038;
+
+’
+
+Apostrophe
+
+&apos;
+
+&#039;
+
+<
+
+Kurang dari (less-than)
+
+&lt;
+
+&#060;
+
+>
+
+Lebih dari (greater-than)
+
+&gt;
+
+&#062;
+
+©
+
+Hak cipta (copyright)
+
+&copy;
+
+&#169;
+
+®
+
+Merek dagang terdaftar (registered trademark)
+
+&reg;
+
+&#174;
+
+™
+
+Merek dagang (trademark)
+
+&trade;
+
+&#8482;
+
+£
+
+Pound
+
+&pound;
+
+&#163;
+
+¥
+
+Yen
+
+&yen;
+
+&#165;
+
+€
+
+Euro
+
+&euro;
+
+&#8364;
+
+–
+
+En-dash
+
+&ndash;
+
+&#8211;
+
+—
+
+Em-dash
+
+&mdash;
+
+&#8212;
+
+‘
+
+Kutip tunggal kiri
+
+&lsquo;
+
+&#8216;
+
+’
+
+Kutip tunggal kanan
+
+&rsquo;
+
+&#8217;
+
+“
+
+Kutip ganda kiri
+
+&ldquo;
+
+&#8220;
+
+”
+
+Kutip ganda kanan
+
+&rdquo;
+
+&#8221;
+
+•
+
+Bullet
+
+&bull;
+
+&#8226;
+
+...
+
+Horizontal ellipsis
+
+&hellip;
+
+&#8230;
+     -->
+  </body>
+</html>

@@ -1,0 +1,15 @@
+body {
+  font-family: sans-serif;
+}
+/* tanda koma berfungsi apabila ada sebuah elemen yang memiliki style yang sama sehingga bisa di gabungkan (group selector) */
+/* kita bisa membuat sebuah property styling agar dianggap penting oleh browser untuk diterapkan dan tidak memperhatikan urutan. Kita bisa menambahkan keyword "!important" pada akhir nilai propertinya. */
+h2,
+h3 {
+  color: blue;
+}
+
+footer {
+  background-color: aqua;
+  color: black;
+  padding: 20px;
+}
