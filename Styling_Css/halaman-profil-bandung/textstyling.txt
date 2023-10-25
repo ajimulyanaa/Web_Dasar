@@ -1,0 +1,64 @@
+Properti line-height digunakan untuk mengatur jarak minimal dari garis dasar ke garis dasar dalam menampilkannya teks pada halaman. Jika kita terbiasa dengan software dokumen editor seperti Microsoft Word, properti ini mirip dengan fungsi line height.
+
+=>text indent
+Dalam membuat sebuah dokumen tidak jarang kita membutuhkan jarak/lekuk di awal paragraf, hal tersebut dapat dilakukan pada website dengan menerapkan properti text-indent.  Kita dapat menentukan nilai properti ini melalui perhitungan panjang dalam px, em, dan in atau bisa menggunakan nilai persentase (%). Nilai persentase dihitung berdasarkan lebar dari induk elemen. Berikut contoh penggunaannya.
+
+=>text aligment
+Kita bisa mengatur text alignment pada website seperti kita melakukannya pada aplikasi Microsoft Word dengan menggunakan properti text-align. Untuk standarnya, properti ini bernilai left atau biasa kita sebut rata kiri. Namun, standarnya bisa jadi menggunakan right atau rata kanan jika ada penerapan atribut language dengan nilai bahasa yang arah bacanya berlawanan.
+
+text-align: left
+
+Membuat perataan teks pada ujung kiri.
+
+text-align: right
+
+Membuat perataan teks pada ujung kanan.
+
+text-align: center
+
+Membuat perataan teks secara menengah.
+
+text-align: justify
+
+Membuat perataan teks yang setara pada ujung kiri dan kanannya.
+
+
+=>textstyling
+#text decoration
+text-decoration: underline
+
+Memberikan garis bawah (underline) pada teks.
+
+text-decoration: overline
+
+Memberikan garis atas (overline) pada teks.
+
+text-decoration: line-through
+
+Memberikan efek tulisan dicoret (strikethrough).
+
+text-decoration: none
+
+Menghilangkan dekorasi teks yang ada pada elemen.
+#text transform
+text-transform: none
+
+Teks yang ditampilkan sama seperti yang dituliskan.
+
+text-transform: capitalize
+
+Membuat huruf pertama besar pada tiap katanya.
+
+text-transform: lowercase
+
+Membuat seluruh teks menggunakan huruf kecil.
+
+Text-transform: uppercase
+
+Membuat seluruh teks menggunakan huruf besar.
+
+#letter spacing dan world spacing
+Properti selanjutnya yang bisa kita gunakan untuk memformat teks adalah letter-spacing dan word-spacing. Sebagaimana namanya, properti ini digunakan untuk mengatur spasi atau jarak pada teks. Properti letter-spacing digunakan untuk mengatur jarak antar huruf, sedangkan word-spacing digunakan untuk mengatur jarak antar (letter-spacing: 4px;)
+
+
+
