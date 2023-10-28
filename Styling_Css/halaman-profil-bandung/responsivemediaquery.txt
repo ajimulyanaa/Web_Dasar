@@ -1,0 +1,25 @@
+kita memerintahkan ke CSS bahwa “tolong terapkan kode styling ini jika ukuran viewport lebih lebar dari 480 piksel”.
+
+@media media-type and (media-feature-rule) {
+  /* CSS rules apa pun ada di sini */
+}
+
+========
+@media screen and (min-width: 400px) {
+  h1 {
+    color: red;
+  }
+
+  h2 {
+    color: green;
+  }
+}
+
+/* CSS rule dalam block @media di bawah akan diterapkan jika ukuran viewport di atas 992px */
+@media screen and (min-width: 600px) {
+  main {
+    flex-direction: row;
+  }
+
+  =======
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />

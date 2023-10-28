@@ -1,0 +1,116 @@
+ Flex container adalah parent elemen dari seluruh flex items, sedangkan flex items adalah elemen yang secara langsung merupakan child dari parent element.
+
+
+Pada asalnya, flex items akan dijejerkan secara horizontal (row), yaitu dimulai dari main-start ke main-end (main axis). Namun, jangan khawatir, kita bisa mengubahnya menggunakan properti yang memiliki peran tersebut. Kita akan mempelajarinya di submodul mendatang.
+
+-Main axis: main axis dari flex container adalah arah sumbu utama yang mana flex items akan dijejerkan atau ditata. Perlu diingat, arah dari main axis tidak selalu horizontal. Hal ini bergantung terhadap value dari properti flex-direction.
+-Main-start | main-end: flex items akan ditempatkan dalam flex container yang berawal dari main-start dan main-end.
+-Main size: main size merupakan lebar atau tinggi dari flex item yang diposisikan pada sumbu utama (main axis).
+-Cross axis: cross axis adalah sumbu yang arahnya tegak lurus dengan main axis. Biasanya ini terjadi ketika flexbox menerapkan value wrap pada properti flex-wrap sehingga susunan layout terlihat dua dimensi.
+-Cross-start | cross-end: flex item yang memenuhi ruang kosong flex container secara vertikal, dimulai dari cross-start hingga cross end. Hal ini dapat kita atur menggunakan properti align-items, align-self, dan align-content.
+-Cross size: lebar atau tinggi dari sebuah flex item yang ditempatkan pada dimensi cross.
+
+====
+Properti-Properti pada Flex Container
+Pada materi ini, kita akan berkenalan terlebih dahulu dengan properti-properti yang dilibatkan kepada flex container (parent element). Properti-properti ini akan berpengaruh secara langsung kepada flex items dalam menampilkan susunannya.
+1.Display
+ Display:flex;
+2. flex direction
+ untuk menentukan arah susunan flex items, kita bisa definisikan menggunakan properti flex-direction. Secara default, value ini adalah row.
+   .container {
+  display: flex;
+  flex-direction: row | row-reverse | column | column-reverse;
+}
+
+row: flex items akan disusun secara horizontal dari kiri ke kanan.
+
+row-reverse: flex items akan disusun secara horizontal, tetapi berarah terbalik (kanan ke kiri).
+
+column: flex items akan disusun secara vertikal dari atas ke bawah.
+
+column-reverse: flex items akan disusun secara vertikal, tetapi dengan arah terbalik (bawah ke atas).
+3.flex wrap
+Pada mulanya, ketika layout dari parent element disusun menggunakan flexbox, flex items akan selalu diletakkan dalam satu baris (satu dimensi). Dengan properti flex-wrap, kita bisa mengubah perilakunya menjadi dua dimensi (jika dibutuhkan). Secara bawaan, value dari properti ini adalah nowrap.
+ketika item didalamnya tidak cukup maka akan diturunkan kebawah.
+.container {
+  display: flex;
+  flex-wrap: nowrap | wrap | wrap-reverse;
+}
+}
+nowrap: flex items hanya akan ditempatkan dalam satu baris.
+
+wrap: flex items akan ditampilkan dalam multiple lines, yakni dari atas ke bawah.
+
+wrap-reverse: flex items akan ditampilkan dalam multiple lines, tetapi dari arah bawah ke atas.
+
+4.justify content
+ Properti ini akan mengatur posisi child elemen pada main axis. Kemudahan ini tentu akan sangat dirasakan ketika membuat tampilan yang responsif.
+
+ container {
+  display: flex;
+  justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
+}
+
+flex-start: peletakan child element akan dimulai dari main-start.
+
+flex-end: peletakan child element dimulai dari main-end.
+
+center: child element akan diletakkan di tengah parent child.
+
+space-between: child element akan tersusun secara merata, elemen pertama berada di tepi main-start dan elemen kedua berada di tepi main-end. Jika child element lebih dari dua, elemen lainnya akan didistribusikan berada di tengah dengan jarak yang sama.
+
+space-around: setiap child elemen akan memiliki panjang celah yang sama pada sisi horizontal.
+
+space-evenly: setiap child elemen akan memiliki jarak yang setara, termasuk jarak ke tepi main-start dan main-end.
+
+5. align 
+Properti ini memiliki perilaku bagaimana menempatkan flex items sepanjang cross axis. Bayangkan bahwa tingkah laku dari properti ini mirip dengan properti justify-content, tetapi mengatur child element dalam satu baris pada cross axis.
+
+stretch: melebar hingga memenuhi container dalam cross axis. Setiap child element akan memiliki nilai height yang sama, meskipun isi konten berbeda.
+
+flex-start: setiap child elemen akan memiliki ukuran height sesuai dengan isi konten serta seluruhnya akan berada di tepi cross-start.
+
+flex-end: setiap child element akan memiliki ukuran height sesuai dengan isi konten serta seluruhnya akan berada di tepi cross-end.
+
+center: setiap child elemen memiliki ukuran height sesuai dengan isi konten dan secara vertikal posisi elemen berada di tengah.
+
+baseline: nilai pada asalnya akan menyerupai flex-start. Namun, jika konten pertama pada masing-masing child element memiliki ukuran height yang berbeda, child element lainnya akan menyesuaikan posisinya secara cross axis dari cross-start.
+
+6. aligncontent
+Properti ini melakukan perataan terhadap flex items di setiap baris pada cross-axis. Tingkah laku properti ini hampir mirip dengan properti justify-content yang mengatur tata letak flex items di sisi main axis.
+
+Hal yang perlu diperhatikan adalah penggunaan properti ini hanya akan berpengaruh pada multi-line flex container, yang mana properti flex-wrap dilibatkan. Flex container yang hanya memiliki single line tidak akan memiliki efek diterapkannya properti align content.
+
+.container {
+  display: flex;
+  flex:wrap;
+  align-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
+}
+
+
+7.gap (celah)
+Sering kali kita ingin memberikan jarak atau celah pada flex items. Biasanya kita akan mengandalkan properti margin dalam hal ini. Namun, ada cara yang lebih efektif, yaitu menggunakan properti gap.
+
+.container {
+  display: flex;
+  gap: 1rem; /*diterapkan secara vertikal dan horizontal dengan nilai yang sama*/
+  gap: 1rem 2rem; /*diterapkan secara vertikal dan horizontal*/
+  row-gap: 1rem; /*diterapkan secara horizontal*/
+  column-gap: 1rem; /*diterapkan secara vertikal*/
+}
+
+
+============
+properti flex, kita menemukan lagi properti shorthand lainnya, yaitu flex-flow. Properti tersebut mencakupi dua buah properti, yaitu flex-direction dan flex-wrap. Terdapat beberapa cara penggunaanya.
+
+
+.item {
+  flex-flow: column; /*flex-direction*/
+}
+ 
+.item {
+  flex-flow: wrap; /*flex-wrap*/
+}
+.item {
+  flex-flow: column wrap; /*flex-direction flex-wrap*/
+}

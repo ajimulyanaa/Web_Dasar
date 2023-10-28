@@ -1,0 +1,7 @@
+Pada struktur konten utama di atas, lebih tepatnya pada elemen aside, kita melihat bahwa terdapat elemen <i> yang berada pada tag anchor. Elemen tersebut digunakan untuk memunculkan gambar ikon media sosial berdasarkan value pada properti class, seperti Youtube, LinkedIn, Twitter, dan Facebook. Saat ini, jika kita lihat melalui browser, tidak akan muncul apa-apa.
+
+Itu sebabnya kita akan menggunakan library font-awesome melalui CDN (Content Delivery Network) yang akan kita sematkan pada dokumen HTML agar ikon tersebut dapat tampil. Silakan buka tautan berikut ini. Kemudian, lakukan copy pada URL CDN yang paling awal dan paste-kan pada tag head di bawah tag link css.
+
+https://cdnjs.com/libraries/font-awesome/5.15.4
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">

@@ -1,15 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  padding: 0;
+  margin: 0;
+  /* font-family: sans-serif; */
 }
 /* tanda koma berfungsi apabila ada sebuah elemen yang memiliki style yang sama sehingga bisa di gabungkan (group selector) */
 /* kita bisa membuat sebuah property styling agar dianggap penting oleh browser untuk diterapkan dan tidak memperhatikan urutan. Kita bisa menambahkan keyword "!important" pada akhir nilai propertinya. */
 h2,
 h3 {
-  color: blue;
+  color: #00a2c6;
+}
+header {
+  display: inline;
 }
 
 footer {
-  background-color: aqua;
-  color: black;
+  background-color: #00a2c6;
+  color: #fff;
   padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  font-weight: bold;
+}
+
+.profile header {
+  text-align: center;
+}
+
+.featured-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile img {
+  width: 200px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.jumbotron {
+  font-size: 20px;
+  padding: 60px;
+  background-color: #00c8eb;
+  text-align: center;
+  color: white;
+}
+
+nav {
+  background-color: #41a4e2;
+  padding: 5px;
+  position: sticky;
+  top: 0;
+}
+
+nav ul {
+  /* Seperti yang tertera pada kode di atas, kita menggunakan properti padding-inline. Perilaku dari properti tersebut sama seperti properti padding pada umumnya. Hanya saja, properti padding-inline membuat padding secara horizontal. Jika ada yang bertanya-tanya, “Berarti ada properti padding-block juga ya?” Jawabannya adalah, “Yup! Benar sekali.” Properti padding-block membuat padding secara vertikal. */
+  padding-inline: 4rem;
+  display: flex;
+  gap: 2rem;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a:hover {
+  font-weight: bold;
+}
+
+.profile header {
+  text-align: center;
+}
+
+#content {
+  /* float: left;
+  width: 75%; */
+  flex: 5;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+.card {
+  box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+aside {
+  /* float: right;
+  width: 25%;
+  padding-left: 20px; */
+  flex: 1;
+}
+
+@media screen and (max-width: 1000px) {
+  #content,
+  aside {
+    width: 100%;
+    padding: 0;
+  }
 }

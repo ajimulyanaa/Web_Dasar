@@ -61,4 +61,12 @@ Membuat seluruh teks menggunakan huruf besar.
 Properti selanjutnya yang bisa kita gunakan untuk memformat teks adalah letter-spacing dan word-spacing. Sebagaimana namanya, properti ini digunakan untuk mengatur spasi atau jarak pada teks. Properti letter-spacing digunakan untuk mengatur jarak antar huruf, sedangkan word-spacing digunakan untuk mengatur jarak antar (letter-spacing: 4px;)
 
 
+#text shadow
 
+membutuhkan 4 nilai diantaranya
+Nilai pertama: menunjukkan seberapa jauh ke kiri atau kanan (horizontal) bayangan harus ditampakkan.
+Nilai kedua: menunjukkan jarak ke atas atau ke bawah (vertical) bayangan harus ditampakkan. 
+Nilai ketiga (opsional): menentukan tingkat keburaman yang harus diterapkan pada bayangan.
+Nilai keempat: menentukan warna yang digunakan pada bayangan.
+
+===== css matic web css
