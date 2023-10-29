@@ -155,3 +155,37 @@ main aside .social-media li a {
 main aside .social-media li a:hover {
   color: #89b0d9;
 }
+
+@media screen and (max-width: 768px) {
+  header.navbar-container {
+    flex-direction: column;
+  }
+
+  header.navbar-container .nav-list ul {
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+  }
+
+  main .content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  main {
+    padding: 1rem 3rem;
+  }
+
+  main .content .content-description .title {
+    font-size: 3rem;
+  }
+
+  main .content .content-description p {
+    font-size: 1rem;
+  }
+
+  main .content .content-image {
+    order: -1;
+  }
+
+  /* Jika dilihat, kita menerapkan properti order pada elemen div.content-image. Fungsi dari properti ini adalah mengatur urutan peletakkan dari susunan flex-items. Secara default, valuenya adalah 0. Namun, jika kita berikan -1, flex-item yang bersangkutan akan ditempatkan pada urutan awal.  */
+}

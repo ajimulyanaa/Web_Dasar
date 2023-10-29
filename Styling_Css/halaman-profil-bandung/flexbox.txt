@@ -1,0 +1,20 @@
+Properti-Properti pada Flex Container
+Dalam penerapan flexbox, ada properti-properti yang terlibat pada dua hal, yaitu flex container (parent element) dan flex items. Properti-properti pada flex container akan berpengaruh secara langsung kepada flex items dalam menampilkan susunannya. Berikut daftar dan penjelasannya.
+
+display: mendefinisikan elemen agar disusun sebagai flexible box.
+flex-direction: menentukan arah susunan flex items dijajarkan.
+flex-wrap: mengubah perilaku susunan flex items menjadi dua dimensi (jika dibutuhkan).
+justify-content: mengatur tata letak dari flex items pada main axis.
+align-items: mirip seperti justify-content, tetapi mengatur child element dalam satu baris pada cross axis.
+align-content: melakukan perataan terhadap flex items di setiap baris pada cross-axis.
+gap: memberikan jarak atau celah pada flex items.
+
+
+Properti-Properti pada Flex Items
+Setelah mempelajari properti-properti pendukung pada flex container, kita akan membahas properti-properti yang digunakan pada flex items. Ingat! Properti yang ditujukan pada flex items hanya akan berpengaruh pada flex item yang di target, bukan elemen pembungkusnya (flex container).
+
+order: mengatur urutan susunan flex items.
+flex-grow: melakukan grow (pelebaran ukuran) dari flex items yang ditarget pada main axis.
+flex-shrink: menyusutkan atau menciutkan ukuran child element jika ukurannya tidak mencukupi ruang container.
+flex-basis: memberikan ukuran default sebelum sisa ruang container didistribusikan kepada flex items.
+align-self: mengatur posisi child element secara cross-axis.
