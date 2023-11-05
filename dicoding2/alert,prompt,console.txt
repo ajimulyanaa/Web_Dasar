@@ -1,0 +1,57 @@
+Alert
+
+Method alert() merupakan salah satu method BOM yang menerima satu parameter opsional berupa data string yang akan ditampilkan melalui sebuah pop-up browser.
+
+alert('Halo, user!');
+
+let message = 'Halo, user!';
+alert(message);
+
+==========
+prompt
+method alert() mengembalikan sebuah value berupa undefined. Namun, prompt() akan mengembalikan sebuah nilai sesuai dengan inputan user
+
+let pesanInput = prompt('Silakan masukkan pesan yang kamu suka!');
+console.log(pesanInput);
+
+menekan tombol "OK", tetapi apa yang terjadi jika kita menekan tombol "Cancel"? Jika kita menekan tombol "Cancel", justru nilai yang dikembalikan adalah null.
+
+Ada satu hal yang perlu kita ingat selama menggunakan prompt(), yakni nilai apa pun yang dimasukkan oleh user akan diproses dan dikembalikan menjadi data string.
+
+let pesanInput = prompt('Silakan masukkan angka...');
+console.log(typeof pesanInput); // melihan type dat jenis variable
+
+Kode tidak bisa menduga bahwa variabel pesanInput merupakan string atau number, ia akan tetap mengeluarkan string. Meskipun demikian, kita bisa cast atau parse hasilnya ke tipe data tertentu. Namun, harap lebih teliti karena jika kita salah melakukan parse ke tipe data maka akan menghasilkan NaN.
+
+Memberikan Nilai Default untuk prompt
+Terdapat satu parameter lagi yang bisa kita masukkan ke prompt(), di mana parameter ini berguna sebagai nilai alternatif
+let name = prompt('Silakan masukkan nama Anda!', 'John Doe');
+console.log(name);
+
+=============
+console
+objek console memberikan kita akses ke fitur debugging alias peralatan-peralatan yang bisa membantu menghilangkan bug yang bersembunyi di dalam kode JavaScript.
+
+Berikut beberapa method dari objek console yang umum digunakan:
+log()
+
+Menampilkan pesan secara umum ke console browser.
+
+info()
+
+Menampilkan pesan yang berisi informasi penting ke console browser.
+
+warn()
+
+Menampilkan pesan yang berisi informasi dalam bentuk peringatan ke console browser.
+
+error()
+
+Menampilkan pesan yang berisi informasi dalam bentuk error ke console browser.
+
+
+-----
+console.log('Ini adalah console log');
+console.info('Ini adalah console info');
+console.warn('Ini adalah console warn');
+console.error('Ini adalah console error');

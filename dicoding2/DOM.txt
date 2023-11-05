@@ -1,0 +1,108 @@
+DOM memberikan izin bagi kode JavaScript untuk mengakses dan memanipulasi konten pada dokumen melalui sebuah Application Programming Interface (API), yakni sesuatu yang memungkinkan JavaScript dan dokumen HTML untuk "berkomunikasi". 
+
+===
+Struktur DOM (dom tree)
+Tree yang dimaksud di sini adalah nama dari sebuah struktur data pada komputer yang secara visual mirip seperti sebuah pohon. Struktur data ini disebut tree, karena layaknya pohon terdapat satu batang induk tunggal yang kemudian bercabang menjadi batang-batang lainnya dan bisa saja bercabang kembali. Jika batang tersebut buntu, maka ujungnya terdapat daun (pada struktur data tree, daun disebut sebagai node).
+
+=====
+mencari dan mendapatkan dom
+Untuk mengakses sebuah elemen HTML melalui DOM, kita gunakan objek yang bernama document. Objek ini berisi semua elemen yang berada pada HTML atau keseluruhan halaman yang terlihat pada jendela browser saat itu
+
+const body = document.body; => mengakses body
+
+method yang bisa kita gunakan adalah getElementById(). Method tersebut berfungsi untuk mendapatkan elemen berdasarkan nilai id-nya. 
+const gambar = document.getElementById('gambarUtama');
+
+=> getElementById()
+document.getElementById('display');
+Mengembalikan satu elemen yang memiliki nilai id "display".
+=> getElementsByName()
+document.getElementsByName('button')
+Mengembalikan banyak elemen (HTMLCollection) yang memiliki attribute name dengan nilai "button".
+=> getElementsByClassName()
+document.getElementsByClassName('button')
+Mengembalikan banyak elemen (HTMLCollection) yang memiliki attribute class dengan nilai "button".
+=> getElementsByTagName()
+document.getElementsByTagName('div')
+Mengembalikan banyak elemen (HTMLCollection) yang merupakan <div> element.
+=> querySelector()
+document.querySelector('.button')
+Mengembalikan elemen pertama (node) yang menerapkan class "button".
+=> querySelectorAll()
+document.querySelectorAll('.button')
+Mengembalikan banyak Node dalam bentuk NodeList yang menerapkan class "button".
+
+Pada method di atas ada yang mengembalikan nilai HTML elemen secara tunggal. Selain itu, ada juga yang mengembalikan banyak elemen dari sebuah berkas HTML yang biasa disebut sebagai HTMLCollection.
+
+Ada fakta menarik tentang HTMLCollection, yakni memiliki karakteristik yang mirip dengan array. Contohnya, kita bisa menggunakan properti length untuk mendapatkan jumlah elemen yang terdapat di dalamnya. 
+Sesuai dengan nama method tersebut, method querySelector() dan querySelectorAll() membutuhkan query khusus sebagai parameternya. Jika tujuan kita adalah mendapatkan elemen berdasarkan atribut class, maka parameternya harus diawali dengan tanda titik ("."), sedangkan jika berdasarkan atribut id, kita harus mengawali nilai parameternya dengan tanda pagar ("#").
+
+=============
+Sekarang mari kita mulai dengan membahas method createElement(). Dengan method tersebut, kita bisa membuat sebuah elemen HTML yang benar-benar baru tanpa memanipulasi isi konten berkas HTML.
+
+const newElement = document.createElement('p');
+
+newElement.innerText = 'Selamat datang ke HTML kosong ini :)';
+
+untuk memberikan atribut src pada elemen <img>, kita bisa memanggil function setAttribute(). Function ini menerima dua parameter, yaitu nama atribut yang ingin ditambahkan dan nilai yang ingin diberikan dalam artribut tersebut.
+newImg.setAttribute('src', 'https://picsum.photos/200/300');
+
+Mengubah Konten HTML - Menyiapkan Konten
+
+element.setAttribute('nama_atribut_sasaran', 'nilai_atribut_sasaran');
+
+=====
+Inner text HTML
+innerHTML mengambil semua konten dalam sebuah elemen beserta tag-tag HTML yang ada, sedangkan innerText hanya mengambil teks tanpa tag-tag HTML yang ada.
+
+
+===mengganti isi HTML (innerText)
+const dicoding=document.getElementById("DicodingLink");
+dicoding.innerText="belajar programming"
+===mengganti isi HTML (innerhtml)
+const dicoding=document.getElementById("DicodingLink");
+dicoding.innerHTML="<i> belajar programmig</i>
+
+
+=====
+Manipulasi Style Konten dengan style.property
+
+const buton = document.getElementsByClassName("button);
+
+for(const butons of buton){
+    console.log(butons.children[0]);
+}
+
+for(const butons of buton){
+    butons.children[0].style.borderRadius="3px";
+}
+
+
+Lho? Styling yang kita ingin ubah pada asalnya bernama "border-radius", tapi kenapa menjadi "borderRadius"? Singkatnya, nama properti dari objek DOM mengikuti standar penamaan variabel khusus. Penamaannya tidak boleh mengandung tanda "-". Sehingga, nama properti CSS yang memiliki tanda "-" diubah menjadi bentuk camelCase. Contohnya border-radius menjadi borderRadius, font-family menjadi fontFamily, font-size menjadi fontSize, dan seterusnya.
+=======Menambahkan Elemen HTML ke DOM
+appendChild() dan insertBefore().
+
+menambahkan element dengan apendChild()
+Fungsinya adalah menambahkan atau menyisipkan sebuah child elemen ke bagian akhir dari sebuah elemen. 
+
+const get=document.createElement('li');
+get.innerText="selamat menikmati";
+
+const dft=document.getElementById("daftar);
+dft.appendChild(get);
+===========
+Menambahkan Elemen dengan insertBefore()
+Tidak seperti method sebelumnya, method insertBefore() memberikan kemampuan untuk menyisipkan elemen sebelum child elemen tertentu dalam parent element. Method ini menerima dua buah parameter, yaitu (1) elemen baru yang ingin disisipkan dan (2) child element yang akan dijadikan patokan diletakkannya elemen baru.
+
+const get1=document.createElement("li");
+
+get1.innerText="hidupkan kompor";
+
+const dft=document.getElementById("daftar);
+const get2=document.getElementById("awal");
+
+dft.insertBefore(get1,get2);
+
+
+
+

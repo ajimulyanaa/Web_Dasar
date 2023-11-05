@@ -1,0 +1,6 @@
+BOM. Dengan BOM, kita dapat memberikan perintah-perintah khusus ke browser, misalnya melalui sebuah ‘atribut’ khusus milik browser yakni ‘window’ (akan kita bahas di materi selanjutnya) sehingga kita bisa membuat browser menampilkan pesan pop-up. Caranya yakni menjalankan method alert() pada console milik browser.
+
+Cara kedua adalah DOM. DOM sama seperti BOM. Perbedaannya adalah kita menggunakan global objek bernama document. Melalui global objek ini, kita bisa menangkap seluruh elemen dalam dokumen HTML guna memanipulasi konten HTML melalui method getElementById(). 
+
+==============
+kita cukup membahas 3 method paling dasar yakni alert(), prompt(), dan objek console

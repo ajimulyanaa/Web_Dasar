@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        text-align: center;
+      }
+      .content {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 2px solid black;
+        padding: 15px;
+      }
+
+      #genertebutton {
+        margin-top: 5px;
+        margin-bottom: 15px;
+      }
+    </style>
+    <title>Event</title>
+  </head>
+  <body>
+    <div class="content" hidden>
+      <button id="incrementbutton">Tekan aku :)</button>
+      <h3>Kamu sudah menekan tombol diatas sebanyak <span id="count">0</span></h3>
+    </div>
+
+    <script>
+      function increment() {
+        document.getElementById('count').innerText++;
+
+        if (document.getElementById('count').innerText == 7) {
+          const hiddenMessage = document.createElement('h4');
+          hiddenMessage.innerText = 'Selamat anda menemukan hadiah !!';
+          const images = document.createElement('img');
+          images.setAttribute('src', 'https://i.ibb.co/0V49VRZ/catto.jpg');
+          const contents = document.querySelector('.content');
+          contents.appendChild(hiddenMessage).appendChild(images);
+        }
+      }
+
+      function welcome() {
+        alert('Munculkan halaman Html ! ');
+        const set = document.querySelector('.content');
+        set.removeAttribute('hidden');
+      }
+
+      document.getElementById('incrementbutton').onclick = increment;
+      document.body.onload = welcome;
+
+      //   doukumen javascript dibaca dari bawah ya ges.
+    </script>
+  </body>
+</html>
