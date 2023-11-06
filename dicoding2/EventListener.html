@@ -23,9 +23,9 @@
     </style>
     <title>Event</title>
   </head>
-  <body onload="welcome()">
+  <body>
     <div class="content" hidden>
-      <button id="incrementbutton" onclick="increment()">Tekan aku :)</button>
+      <button id="incrementbutton">Tekan aku :)</button>
       <h3>Kamu sudah menekan tombol diatas sebanyak <span id="count">0</span></h3>
     </div>
 
@@ -48,10 +48,9 @@
         const set = document.querySelector('.content');
         set.removeAttribute('hidden');
       }
-
-      // document.getElementById('incrementbutton').onclick = increment;
-      // document.body.onload = welcome;
-      // semua fiturnya akan kita kembalikan melalui inline event handler, yakni menulis event handler melalui atribut tag HTML (onload dan onclick).
+      //   method addEventListener() tidak bisa bekerja pada tag <body>
+      window.addEventListener('load', welcome);
+      document.getElementById('incrementbutton').addEventListener('click', increment);
 
       //   doukumen javascript dibaca dari bawah ya ges.
     </script>

@@ -71,3 +71,38 @@ Event ini akan terjadi ketika kita menekan elemen tertentu dua kali berturut-tur
 => onmouseover
 
 Event ini akan terjadi ketika cursor kita berada di atas sebuah elemen tertentu.
+
+Menambahakan even handler menerapaka event handler inline
+
+=============================
+Menambahkan event handler dengan addEventListener()
+Method addEventListener() menerima beberapa parameter, tetapi yang perlu kita ketahui sementara adalah parameter pertama dan kedua. Parameter pertama harus diisi dengan tipe event yang digunakan, yang mana akan men-trigger atau memancing kode JavaScript untuk menjalankan sebuah fungsi khusus. Function khusus diletakkan pada parameter kedua yang akan dijalankan ketika tipe event yang didefinisikan terjadi. 
+
+Ada satu aturan yang perlu kita ketahui, yaitu nama event yang kita definisikan tidak seperti sebelumnya menggunakan onload dan onclick (tanpa imbuhan "on"). Namun, kita dapat menuliskannya secara langsung. Sebagai contoh function onload menjadi ‘load’, function onclick menjadi ‘click’. Untuk daftar lengkap event apa saja yang didukung dapat dilihat di sini: https://developer.mozilla.org/en-US/docs/Web/Events.
+
+Kelebihannya adalah kita bisa menambahkan satu atau lebih fungsi sebagai event handler. Fitur itulah yang tidak dapat dilakukan oleh event handler inline.
+
+<script>
+  // contoh penerapan
+  element.onclick = fungsiA;
+  element.onclick = fungsiB;
+</script>
+
+Selain itu, terdapat permasalahan lagi jika tidak menggunakan addEventListener. Kode di atas, kita memanggil function onclick dan melakukan assignment dengan fungsiA dan fungsiB. Sayangnya, fungsiA ini akan ter-overwrite alias tertimpa fungsiB. Oleh karena itu, jika elemen di-klik, hanya fungsiB saja yang dijalankan. Bagaimana cara kita menemukan solusi agar fungsiA dan fungsiB dijalankan ketika elemen di-klik? Gunakanlah method addEventListener()!
+
+Selain mampu menambahkan multiple event listener dalam satu event, kita juga akan mempelajari penerapan method addEventListener() lebih tepat untuk skenario-skenario tertentu ketimbang menggunakan event handler yang dicontohkan sebelumnya. Method addEventListener() juga mendukung fitur “event bubbling dan capturing”
+
+
+=============
+Menambahkan custom event
+Custom Event pada materi ini merujuk kepada penggunaan class Event() untuk membuat event dengan nama yang sudah kita tentukan sendiri. Misal, sebelumnya kita telah menggunakan nama-nama event yang sudah “dikenal” oleh JavaScript yakni seperti “click” dan “load’. Apakah mungkin jika kita membuat event sendiri? Misalnya, event dengan nama "eventBuatanKita"? Jawabannya, sangat mungkin!
+
+// membuat custom event
+const eventBuatan = new Event('eventBuatanKita');
+ 
+// meletakkannya pada sebuah method addEventListener()
+element.addEventListener('eventBuatanKita');
+
+ method addEventListener, custom event memungkinkan kita untuk menjalankan sebuah event handler setelah sebuah event handler lain selesai dipanggil.
+
+ 
