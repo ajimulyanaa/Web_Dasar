@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      .contents {
+        border: 2px solid black;
+        padding: 15px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%-50%);
+      }
+
+      .formElement {
+        margin: 8px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contents">
+      <h2>Isi data diri</h2>
+      <div class="formcontent">
+        <form action="" id="formDataDiri">
+          <div class="formElement">
+            <label for="inputNama">Nama :</label>
+            <input type="text" id="inputNama" name="nama" placeholder="Masukan nama anda" required /> <br />
+          </div>
+          <div class="formElement">
+            <label for="inputDomisili">Domisili :</label>
+            <input type="text" id="inputDomisili" name="domisili" placeholder="Input Domisili" required />
+          </div>
+          <br />
+          <div class="formElement">
+            <input type="submit" value="submitData" />
+          </div>
+        </form>
+      </div>
+      <h3 id="messageAfterSubmit"></h3>
+    </div>
+
+    <script>
+      const submitAction = document.getElementById('formDataDiri');
+      submitAction.addEventListener('submit', function (event) {
+        const inputNama = document.getElementById('inputNama').value;
+        const inputDomisili = document.getElementById('inputDomisili').value;
+        const hiddenMessage = 'hallo ' + inputNama + 'bagaimana cuaca di' + inputDomisili;
+
+        document.getElementById('messageAfterSubmit').innerText = hiddenMessage;
+
+        event.preventDefault();
+
+        // Ada sebuah kode baru yang belum pernah kita bahas yakni event.preventDefault(). Apa fungsi kode tersebut? Ketika kita melakukan proses submit pada form, halaman web akan melakukan proses refresh. Nah, event.preventDefault() akan mencegah proses refresh tersebut.
+      });
+    </script>
+  </body>
+</html>

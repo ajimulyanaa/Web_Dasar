@@ -25,25 +25,47 @@
   </head>
   <body>
     <div class="buttons">
-      <h3>Kamu sudah menekan tombol diatas sebanyak <span id="count">0</span></h3>
+      <h3 id="caption">Silahkan tekan tombol di bawah ini....</h3>
       <button class="button" id="tombol">Tombol Custom Event</button>
     </div>
 
     <script>
-      const caption = new Event('changeCaption');
+      const change = new Event('changeCaption');
 
       window.addEventListener('load', function () {
         const tombol = document.getElementById('tombol');
-        tombol.addEventListener('caption', customhadler);
-        tombol.addEventListener('click', function () {});
+        tombol.addEventListener('changeCaption', customhadler);
+        tombol.addEventListener('click', function () {
+          tombol.dispatchEvent(change);
+        });
       });
 
-      function customhadler(ch) {
-        console.log('Event' + ch.type + 'telah di tekan');
-        const caption2 = document.getElementById('caption');
-        caption2.innerText = 'anda telah mengaktifkan tombol';
+      function customhadler(ev) {
+        console.log('Event' + ev.type + 'telah di tekan');
+        const caption = document.getElementById('caption');
+        caption.innerText = 'anda telah mengaktifkan tombol';
       }
+
       //   doukumen javascript dibaca dari bawah ya ges.
     </script>
+    <!-- <script>
+      const changeCaption = new Event('changeCaption');
+
+      window.addEventListener('load', function () {
+        const tombol = document.getElementById('tombol');
+        tombol.addEventListener('changeCaption', customhadler);
+        tombol.addEventListener('click', function () {
+          tombol.dispatchEvent(changeCaption);
+        });
+      });
+
+      function customhadler(ev) {
+        console.log('Event' + ev.type + 'telah di tekan');
+        const caption = document.getElementById('caption');
+        caption.innerText = 'anda telah mengaktifkan tombol';
+      }
+
+      //   doukumen javascript dibaca dari bawah ya ges.
+    </script> -->
   </body>
 </html>

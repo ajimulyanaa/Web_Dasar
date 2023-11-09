@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubling</title>
+    <style>
+      body div {
+        width: 60%;
+        margin: 8px;
+        padding: 5px;
+        border: 2px solid black;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body align="center">
+    <div onclick="alert('ELEMENT LANGIT') ">
+      LANGIT
+      <div onclick="alert('ELEMENT LUAR') ">
+        LUAR
+        <div onclick="alert('ELEMENT TENGAH') ">
+          TENGAH
+          <div onclick="alert('ELEMENT DALAM') ">DALAM</div>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      Perhatikan kembali setiap tag div pada berkas HTML di atas. Semua elemen memiliki event handler untuk event onclick. Sesuai dengan penjelasan bubbling, jika kita menekan elemen paling dalam, maka semua event handler akan dijalankan
+      dimulai dari elemen pertama yang di-klik lalu kemudian parent-nya dan seterusnya.
+    </p>
+  </body>
+</html>

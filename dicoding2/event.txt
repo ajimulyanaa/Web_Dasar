@@ -105,4 +105,9 @@ element.addEventListener('eventBuatanKita');
 
  method addEventListener, custom event memungkinkan kita untuk menjalankan sebuah event handler setelah sebuah event handler lain selesai dipanggil.
 
- 
+ BUBLING DAN capturing
+
+ 1. Event BUBLING
+      fenomena bubbling adalah ketika sebuah event terjadi pada sebuah elemen, maka event handler milik elemen tersebut akan dijalankan terlebih dahulu yang diikuti event handler elemen parent-nya, dan seterusnya sampai elemen paling atas.
+  2. capturing
+       Capturing merupakan kebalikan dari bubbling yang akan men-trigger event handler dari parent ke child.

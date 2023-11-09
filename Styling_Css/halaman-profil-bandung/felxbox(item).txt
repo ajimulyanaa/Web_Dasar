@@ -33,7 +33,7 @@ Properti ini memiliki tingkah laku yang sama dengan properti align items. Proper
 =======
 Pada kode di atas, kita menggunakan properti flex. Properti ini merupakan properti shorthand yang mencakup tiga buah properti, yaitu flex-grow, flex-shrink, dan flex-basis (jika lupa, Anda dapat membuka kembali materi sebelumnya). Terdapat beberapa opsi nilai saat memberikan value pada properti flex. 
 
-flex:flex-grow, flex-shrink, dan flex-basi;
+flex:flex-grow, flex-shrink, dan flex-basis;
 
 .item {
   flex: 0; /*flex-grow*/
